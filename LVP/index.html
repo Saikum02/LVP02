@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Sincere Request... 🫠</title>
+    <link rel="stylesheet" href="C:\Users\91904\Desktop\LVP\style.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card active" id="screen1">
+            <div class="icon">🙏🏼</div>
+            <h1>I Am Sorry...</h1>
+            <p>Someone realizes they messed up the chat updates last night and wants to say something straight from the heart...</p>
+            <button class="btn" onclick="nextScreen(2)">Open Message ✨</button>
+        </div>
+
+        <div class="card" id="screen2">
+            <div class="heart-icon">🤍</div>
+            <h2>For Madam...</h2>
+            <p class="quote">"Sometimes the hardest thing to admit is that I shouldn't have left that melting emoji on unseen..."</p>
+            <p>I know you were just saying 'Utigane', but your anger was completely justified. Let me make it up to you?</p>
+            <button class="btn" onclick="nextScreen(3)">Continue 🤭</button>
+        </div>
+
+        <div class="card" id="screen3">
+            <h2>Our Moments 🫶🏼</h2>
+            <p>Memories too precious to lose over delayed notifications...</p>
+            <div class="gallery">
+                <div class="photo-frame">
+                    <img src="her.jfif" alt="Madam in Saree">
+                    <div class="caption">The beautiful angry Madam 🤍</div>
+                </div>
+                <div class="photo-frame">
+                    <img src="you.jpg" alt="You">
+                    <div class="caption">The one who promised to reply by morning 🫠</div>
+                </div>
+            </div>
+            <button class="btn" onclick="nextScreen(4)">Next 😏</button>
+        </div>
+
+        <div class="card" id="screen4">
+            <h2>Are You Happy Now? ✨</h2>
+            <p>Tap the face below to bring a smile back to Madam's face...</p>
+            <div class="emoji-meter" id="emojiMeter" onclick="upgradeSmile()">😐</div>
+            <p id="meterText">Waiting for forgiveness...</p>
+            <button class="btn hidden" id="screen4Next" onclick="nextScreen(5)">Almost there... ❤️</button>
+        </div>
+
+        <div class="card" id="screen5">
+            <div class="icon">🙏🏼</div>
+            <h2>Have you forgiven me? 🥺</h2>
+            <p>Please say yes... I promise my chats are fully working now!</p>
+            <div class="btn-group">
+                <button class="btn success-btn" onclick="nextScreen(6)">YES ✅</button>
+                <button class="btn danger-btn" id="noBtn" onmouseover="dodgeNoButton()">No 🙈</button>
+            </div>
+        </div>
+
+        <div class="card" id="screen6">
+            <div class="icon">✨</div>
+            <h2>Dil Se Maafi! 🎉</h2>
+            <div class="final-message">
+                <p>I know I tested your patience with those slow replies and midnight ghosting.</p>
+                <p>But seeing you look this stunning in a saree makes me realize I can't risk being locked out of your chat screen forever!</p>
+                <p><strong>Your Card is Saved. Now open your DMs and tell me what you want for Sunday dinner! 🍨🍿</strong></p>
+            </div>
+            <div class="confetti">🥳💖✨👑</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

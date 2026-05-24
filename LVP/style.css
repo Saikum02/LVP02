@@ -1,0 +1,216 @@
+:root {
+    --bg-dark: #0d0d11;
+    --card-bg: #1a1a24;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3cc;
+    --accent-color: #e6b800; /* Subtle gold accent matching her saree border */
+    --transition-speed: 0.5s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 580px;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    pointer-events: none;
+    transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.card.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.heart-icon {
+    font-size: 45px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+h1, h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.quote {
+    font-style: italic;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 15px;
+    text-align: left;
+    margin: 15px 0;
+}
+
+.btn {
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    width: 80%;
+    margin-top: auto;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    background: #f2f2f2;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Photo Gallery styling */
+.gallery {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.photo-frame {
+    flex: 1;
+    background: #252533;
+    padding: 8px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.caption {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+/* Emoji interactive meter */
+.emoji-meter {
+    font-size: 70px;
+    cursor: pointer;
+    margin: 20px 0;
+    user-select: none;
+    transition: transform 0.2s ease;
+}
+
+.emoji-meter:active {
+    transform: scale(1.2);
+}
+
+#meterText {
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+/* Choice Buttons */
+.btn-group {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+}
+
+.success-btn {
+    background: #24g263;
+    background: #fff;
+    color: #000;
+    flex: 1;
+    margin-top: 0;
+}
+
+.danger-btn {
+    background: #332226;
+    color: #ff4d6d;
+    border: 1px solid #ff4d6d;
+    flex: 1;
+    margin-top: 0;
+    position: relative;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.final-message {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.final-message p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.confetti {
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
